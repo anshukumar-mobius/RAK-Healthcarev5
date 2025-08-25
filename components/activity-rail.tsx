@@ -6,7 +6,7 @@ import { Badge } from '@/components/ui/badge';
 import { ScrollArea } from '@/components/ui/scroll-area';
 import { Separator } from '@/components/ui/separator';
 import { Button } from '@/components/ui/button';
-import { Bell, ChevronRight, AlertTriangle, CheckCircle, Clock } from 'lucide-react';
+import { Bell, ChevronRight, AlertTriangle, CheckCircle, Clock, AlertCircle, Info } from 'lucide-react';
 import { useAlerts } from '@/lib/queries';
 
 const activities = [
@@ -46,6 +46,9 @@ const activities = [
 
 const severityIcons = {
   critical: AlertTriangle,
+  high: AlertCircle,
+  medium: Clock,
+  low: Info,
   success: CheckCircle,
   warning: Clock,
   info: Bell,
@@ -53,6 +56,9 @@ const severityIcons = {
 
 const severityColors = {
   critical: 'text-red-500',
+  high: 'text-orange-500',
+  medium: 'text-yellow-500',
+  low: 'text-blue-400',
   success: 'text-green-500',
   warning: 'text-yellow-500',
   info: 'text-blue-500',
